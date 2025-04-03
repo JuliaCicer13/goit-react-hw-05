@@ -1,8 +1,11 @@
-export const MovieReviews = () => {
+import { useParams } from "react-router-dom";
+
+export default function MovieReviews () {
+  const { movieId } = useParams();
   return (
     <section>
       <div>
-        <h2>First review - 4.6/5</h2>
+        <h2>First review - 4.6/5: { movieId}</h2>
         <p>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem harum
           architecto sapiente corporis, voluptatem quas voluptatibus fugiat

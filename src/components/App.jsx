@@ -1,11 +1,11 @@
 import css from './App.module.css';
 import { Route, Routes} from "react-router-dom";
-import HomePage from "./pages/HomePage";
-import MovieDetailsPage from "./pages/MovieDetailPage";
-import MoviesPage from "./pages/MoviesPage";
-import MovieCast from "./pages/MovieCast";
-import MovieReviews from "./pages/MovieReviews";
-import NotFoundPage from "./pages/NotFoundPage"
+import HomePage from "../pages/HomePage";
+import MovieDetailsPage from "../pages/MovieDetailsPage";
+import MoviesPage from "../pages/MoviesPage";
+import MovieCast from "../components/MovieCast";
+import MovieReviews from "../components/MovieReviews";
+import NotFoundPage from "../pages/NotFoundPage"
 
 export default function App() {
 
@@ -15,8 +15,8 @@ export default function App() {
       <Routes>
         <Route path='/' element={<HomePage/>} />
         <Route path='/movies/:movieId' element={<MovieDetailsPage />}>
-          <Route path='/movies/:movieId/cast' element={<MovieCast />} />
-          <Route path='/movies/:movieId/reviews' element={<MovieReviews />} />
+          <Route path='cast' element={<MovieCast />} />
+          <Route path='reviews' element={<MovieReviews />} />
         </Route>
         <Route path="/movies" element={<MoviesPage />} />
         <Route path="*" element={<NotFoundPage />} />

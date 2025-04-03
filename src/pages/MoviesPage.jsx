@@ -1,5 +1,4 @@
-import { MovieList } from '../components/MovieList';
-import { getMovies } from '../fakeApi';
+import  MovieList  from '../components/MovieList';
 
 export default function MoviesPage() {
   const movies = getMovies();
