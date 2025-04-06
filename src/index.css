@@ -17,6 +17,8 @@ a {
   font-weight: 500;
   color: #646cff;
   text-decoration: inherit;
+  margin-right: 15px;
+ 
 }
 
 a:hover {
@@ -68,27 +70,16 @@ p {
 
 ul,
 ol {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0;
-  padding: 0;
   list-style: none;
   justify-content: center;
   gap: 15px;
-}
-li {
-  width: 400px;
-  height: 300px;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+ 
 }
 
 img {
-  display: block;
-  width: 400px;
+  width: 500px;
   height: 300px;
   margin-top: 10px;
   margin-bottom: 10px;
-  flex-wrap: wrap;
+
 }

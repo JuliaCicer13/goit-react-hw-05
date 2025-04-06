@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-
+import css from "../components/styles/NotFound.module.css"
 export default function NotFound () {
   const navigate = useNavigate();
   useEffect(() => {
@@ -10,5 +10,5 @@ export default function NotFound () {
 
     return () => clearTimeout(timer);
   }, [navigate]);
-  return <p> 404 The page doesn`t exist. Returne to the previous page</p>
+  return <p className={css.comment}> 404 The page doesn`t exist. Returne to the previous page</p>
 }
