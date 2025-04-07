@@ -18,3 +18,17 @@
     font-size: 35px;
     color: rgb(156, 99, 202);
 }
+
+.backButton {
+    color: aqua;
+    font-size: 25px;
+    margin-left: 20px;
+}
+
+.backButton:hover {
+    text-decoration: underline;
+    text-transform: uppercase;
+    text-overflow: initial;
+    text-decoration-color: blueviolet;
+   
+}

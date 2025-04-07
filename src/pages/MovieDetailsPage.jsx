@@ -10,7 +10,7 @@ export default function MovieDetailsPage() {
   const { movieId } = useParams();
   const [movieDetails, setMovieDetails] = useState(null);
 
-  const backLinkRef = useRef(location.state?.form ?? '/movies');
+  const backLinkRef = useRef(location.state?.from ?? "/");
 
   useEffect(() => {
     const url = `https://api.themoviedb.org/3/movie/${movieId}?language=en-US`;

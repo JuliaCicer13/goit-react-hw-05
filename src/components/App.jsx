@@ -6,7 +6,7 @@ import MovieCast from "../components/MovieCast.jsx";
 import MovieReviews from "../components/MovieReviews.jsx";
 const HomePage = lazy(() =>  import("../pages/HomePage"));
 const MovieDetailsPage = lazy(() => import("../pages/MovieDetailsPage"));
-const MoviesPage = lazy(() => import("../pages/MoviesPage"));
+const MoviesPage = lazy(() => import("../pages/MoviesPage.jsx"));
 const NotFoundPage = lazy(() => import("../pages/NotFoundPage"));
 
 export default function App() {

@@ -3,11 +3,13 @@
     font-size: 15px;
     font-weight: 600;
     margin-bottom: 100px;
+
 }
 
 .link{
     margin-right: 15px;
     gap: 10px;
+
 }
 
 .active{

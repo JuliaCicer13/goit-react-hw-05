@@ -32,8 +32,9 @@ body {
 
 h1 {
   font-size: 33px;
-  color: #fc03ef;
-  font-family:Georgia, 'Times New Roman', Times, serif;
+  color: #0331fc;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 800;
   line-height: 1.1;
 }
 
@@ -49,7 +50,7 @@ button {
   transition: border-color 0.25s;
 }
 button:hover {
-  border-color:#f70098;
+  border-color:#77014a;
 }
 button:focus,
 button:focus-visible {

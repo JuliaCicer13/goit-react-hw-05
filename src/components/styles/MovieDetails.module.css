@@ -1,7 +1,7 @@
 .page{
     width: 1500px;
     height: 1400px;
-    margin-top: 50px;
+    margin-top: 100px;
 }
 .image{
     width: 1500px;
@@ -36,4 +36,16 @@
     font-weight: 700;
     color: rgba(155, 30, 228, 0.87);
     margin-top: 30px;
+}
+.backButton{
+  color: aqua;
+  font-size: 25px;
+
+}
+.backButton:hover{
+    text-decoration: underline;
+    text-transform: uppercase;
+    text-overflow: initial;
+    text-decoration-color: blueviolet;
+     
 }

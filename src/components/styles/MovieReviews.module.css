@@ -14,8 +14,18 @@
 .listReviews{
  list-style: none;
 }
-.button{
+.backButton{
+    color: aqua;
+    font-size: 25px;
     margin-left: 20px;
+}
+
+.backButton:hover {
+    text-decoration: underline;
+    text-transform: uppercase;
+    text-overflow: initial;
+    text-decoration-color: blueviolet;
+
 }
 
 .author{
