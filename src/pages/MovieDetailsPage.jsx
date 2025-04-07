@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import axios from 'axios';
 import css from '../components/styles/MovieDetails.module.css';
 import {useParams, Link, useLocation, Outlet } from 'react-router-dom';
@@ -9,7 +9,9 @@ export default function MovieDetailsPage() {
   const location = useLocation();
   const { movieId } = useParams();
   const [movieDetails, setMovieDetails] = useState(null);
-  const from = location.starte?.from ?? "/movies";
+
+  const backLinkRef = useRef(location.state?.form ?? '/movies');
+
   useEffect(() => {
     const url = `https://api.themoviedb.org/3/movie/${movieId}?language=en-US`;
 
@@ -32,6 +34,7 @@ export default function MovieDetailsPage() {
 
   return (
     <main className={css.page}>
+      <Link className={css.backButton} to={backLinkRef.current}>Go back</Link>
       <h1 className={css.titlePage}>{movieDetails.title}</h1>
       <img className={css.image} src={`https://image.tmdb.org/t/p/w500${movieDetails.poster_path}`} alt={movieDetails.title} />
       <p className={css.discribe}>{movieDetails.overview}</p>
@@ -39,10 +42,10 @@ export default function MovieDetailsPage() {
          <h2 className={css.extraTitle}>Extra details</h2>
       <ul className={css.extraList}>
         <li className={css.littleWrap}>
-          <Link to="cast" state={{from}}>Cast</Link>
+          <Link to="cast" state={{from: backLinkRef.current}}>Cast</Link>
         </li>
         <li className={css.littleWrap}>
-          <Link to="reviews" state={{from}}>Reviews</Link>
+          <Link to="reviews" state={{from: backLinkRef.current}}>Reviews</Link>
         </li>
       </ul>
       <Outlet/>
